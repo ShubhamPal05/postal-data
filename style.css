@@ -16,7 +16,7 @@ body *{
 #firstContainer{
     font-size: large;
     font-weight: bold;
-    width: 100vw;
+    width: 95vw;
     margin: auto;
 }
 
@@ -24,18 +24,12 @@ body *{
     text-align: center;
 }
 
-#postalTable{
-    width: 90vw;
-    padding: 50px 50px;
-}
-
 
 #postalTable td div{
-
-    margin: 40px 50px;
-    padding: 5px 5px;
-    border-radius: 5px;
-    border: 2px solid black;
+    margin: 1rem 1rem;
+    padding: 0.3rem 0.3rem;
+    border-radius: 0.3rem;
+    border: 0.1rem solid black;
 }
 
 h2{
