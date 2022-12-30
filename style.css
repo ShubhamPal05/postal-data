@@ -1,0 +1,43 @@
+body { overflow-x: hidden; /* Hide scrollbars */ 
+    margin: 10px 10px;
+}
+
+body *{
+    margin-bottom: 1rem;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+#firstContainer{
+    font-size: large;
+    font-weight: bold;
+    width: 100vw;
+    margin: auto;
+}
+
+#mapDisplay{
+    text-align: center;
+}
+
+#postalTable{
+    width: 90vw;
+    padding: 50px 50px;
+}
+
+
+#postalTable td div{
+
+    margin: 40px 50px;
+    padding: 5px 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+h2{
+    font-size: larger;
+}

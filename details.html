@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <h2 style="margin-bottom: 2rem;">My Public IP Address :     <span id="ipHomePage"> </span>  </h2>
+
+    <table id="firstContainer" >
+        <tr>
+            <td>Lat: <span class="firstContainerDetails"></span></td>
+            <td>City: <span class="firstContainerDetails"></span></td>
+            <td>Organization: <span class="firstContainerDetails"></span></td>
+        </tr>
+
+        <tr>
+            <td>Long: <span class="firstContainerDetails"></span></td>
+            <td>Region: <span class="firstContainerDetails"></span></td>
+            <td>Hostname: <span class="firstContainerDetails"></span></td>
+        </tr>
+    </table>
+    <br>
+    <br>
+
+
+    <div id="mapDisplay" >
+        <iframe style="border: 1px solid aqua;" width="90%" height="400px"></iframe>
+    </div>
+
+    <div>
+        <h2> timeZone: <span class="secondContainer"></span></h2>
+        <h2>date: <span class="secondContainer"></span></h2>
+        <h2>pincode: <span class="secondContainer"></span></h2>
+    </div>
+    <br>
+    <br>
+
+    <div class="form-outline" style="display: flex; justify-content: center;">
+        <input type="search" id="form1" class="form-control" placeholder="Filter" aria-label="Search" style="width: 90vw;">
+    </div>
+
+    <div style="display: flex; justify-content: center;">
+        <table id="postalTable">
+        </table>
+    </div>
+
+    <script src="./details.js" ></script>
+</body>
+</html>
