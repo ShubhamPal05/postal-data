@@ -50,33 +50,35 @@ function renderGeoDetails(geoDetails) {
 }
 
 async function renderPostOffices(geoDetails){
-    var posalData = await fetch(`https://api.postalpincode.in/pincode/${geoDetails.postal}`).then(data => data.json());
-    //var posalData = await fetch(`https://api.postalpincode.in/pincode/226004`).then(data => data.json());
-    console.log(posalData);
-    posalData = posalData[0].PostOffice;
-    console.log(posalData);
+    var postalData = await fetch(`https://api.postalpincode.in/pincode/${geoDetails.postal}`).then(data => data.json());
+    //var postalData = await fetch(`https://api.postalpincode.in/pincode/226004`).then(data => data.json());
+    console.log(postalData);
+
+    postalData = postalData[0].PostOffice;
+    document.getElementsByClassName("secondContainer")[3].innerHTML = postalData.length;
+    console.log(postalData);
     const postalTable = document.getElementById("postalTable");
     var row = document.createElement("tr");
     var col = document.createElement("td");
     var div = document.createElement("div");
 
-    for(let i = 0; i<posalData.length; i++){
+    for(let i = 0; i<postalData.length; i++){
         let newRow = row.cloneNode(true);
         let newCol = col.cloneNode(true);
         let newDiv = div.cloneNode(true);
         
-        newDiv.innerHTML = `<h2>Name: ${posalData[i].Name}</h2> <h2>Branch Type: ${posalData[i].BranchType}</h2> <h2>Delivery Status: ${posalData[i].DeliveryStatus}</h2> <h2>district: ${posalData[i].District}</h2> <h2>Division: ${posalData[i].Division} `;
+        newDiv.innerHTML = `<h2>Name: ${postalData[i].Name}</h2> <h2>Branch Type: ${postalData[i].BranchType}</h2> <h2>Delivery Status: ${postalData[i].DeliveryStatus}</h2> <h2>district: ${postalData[i].District}</h2> <h2>Division: ${postalData[i].Division} `;
         newCol.appendChild(newDiv);
         newRow.appendChild(newCol);
 
         i++;
-        if(i == posalData.length){
+        if(i == postalData.length){
             break;
         }
 
         newCol = col.cloneNode(true);
         newDiv = div.cloneNode(true);
-        newDiv.innerHTML = `<h2>Name: ${posalData[i].Name}</h2> <h2>Branch Type: ${posalData[i].BranchType}</h2> <h2>Delivery Status: ${posalData[i].DeliveryStatus}</h2> <h2>district: ${posalData[i].District}</h2> <h2>Division: ${posalData[i].Division} `;
+        newDiv.innerHTML = `<h2>Name: ${postalData[i].Name}</h2> <h2>Branch Type: ${postalData[i].BranchType}</h2> <h2>Delivery Status: ${postalData[i].DeliveryStatus}</h2> <h2>district: ${postalData[i].District}</h2> <h2>Division: ${postalData[i].Division} `;
         newCol.appendChild(newDiv);
         newRow.appendChild(newCol);
 
